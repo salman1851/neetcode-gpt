@@ -18,7 +18,7 @@ class Solution:
         if activation == "sigmoid":
             sig = 1.0 / (1.0 + np.exp(-z))
         elif activation == "relu":
-            sig = max(0.0,z)
+            sig = np.maximum(0.0,z)
         else:
             sig = z
 
