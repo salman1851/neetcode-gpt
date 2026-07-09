@@ -16,10 +16,6 @@ class Solution:
         
         z = np.dot(x, w) + b
         y_hat = 1.0 / (1.0 + np.exp(-z))
-        
-        # error = y_hat - y_true
-        # sigmoid_deriv = y_hat * (1 - y_hat)
-        # delta = error * sigmoid_deriv
 
         dL_dw = (y_hat - y_true) * y_hat * (1 - y_hat) * x
         dL_db = (y_hat - y_true) * y_hat * (1 - y_hat)
