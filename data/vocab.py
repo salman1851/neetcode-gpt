@@ -9,7 +9,7 @@ class Solution:
         chars = list(text) # make a list of tokens
         chars_ = sorted(set(chars)) # sort the tokens in alphabetical order
         stoi = {o:i for i, o in enumerate(chars_)} # populate a dictionary of integer-token pairs
-        itos = {i:o for i, o in enumerate(chars_)} # populate a dictionary of token-integer pairs
+        itos = {i:o for o, i in stoi.items()} # populate a dictionary of token-integer pairs
 
         return (stoi, itos)
 
